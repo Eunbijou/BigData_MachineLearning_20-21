@@ -1,0 +1,21 @@
+
+1. R 다운로드 - R플랫폼 사용
+
+https://www.r-project.org/
+ : CLAN -> USA -> https://mirror.las.iastate.edu/CRAN/
+
+2. R studio 다운로드 - R을 쉽게 사용하기위한 오픈 소스 통합 개발 환경
+
+https://rstudio.com/products/rstudio/download/
+ : DesktopFree -> https://rstudio.com/products/rstudio/download/#download
+
+3. JAVA JDK 다운로드 - 한글 워드클라우드를 사용하기 위한 rJava와 KoNLP 패키지 사용을 위한
+
+https://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+
+C드라이브에 r_data 폴더를 생성후 다운로드 받은 data 파일을 압축 풀어서 폴더를 제외한 파일만 복사 붙여넣기를 한다.
+
+data 파일을 쓰기 위한 경로 설정을 "C://r_data"로 할것이다.
+
+\\114.70.60.95
