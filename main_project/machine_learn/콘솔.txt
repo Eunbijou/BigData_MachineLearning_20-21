@@ -1,0 +1,64 @@
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+lstm (LSTM)                  (None, 1, 16)             1280      
+_________________________________________________________________
+lstm_1 (LSTM)                (None, 1, 16)             2112      
+_________________________________________________________________
+dense (Dense)                (None, 1, 1)              17        
+=================================================================
+Total params: 3,409
+Trainable params: 3,409
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2021-02-16 06:04:58.358104: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+Traceback (most recent call last):
+  File "C:/Users/p7stu/Desktop/project/main_project/machine_learn/machin_learn.py", line 30, in <module>
+    history = tf.model.fit(study_x, study_y, batch_size=5, epochs=200)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\training.py", line 1100, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\def_function.py", line 871, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\def_function.py", line 726, in _initialize
+    *args, **kwds))
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\function.py", line 2969, in _get_concrete_function_internal_garbage_collected
+    graph_function, _ = self._maybe_define_function(args, kwargs)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\function.py", line 3361, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\function.py", line 3206, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\framework\func_graph.py", line 990, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\eager\def_function.py", line 634, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\framework\func_graph.py", line 977, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+ValueError: in user code:
+
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\training.py:805 train_function  *
+        return step_function(self, iterator)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\training.py:795 step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\distribute\distribute_lib.py:1259 run
+        return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\distribute\distribute_lib.py:2730 call_for_each_replica
+        return self._call_for_each_replica(fn, args, kwargs)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\distribute\distribute_lib.py:3417 _call_for_each_replica
+        return fn(*args, **kwargs)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\training.py:788 run_step  **
+        outputs = model.train_step(data)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\training.py:754 train_step
+        y_pred = self(x, training=True)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\base_layer.py:998 __call__
+        input_spec.assert_input_compatibility(self.input_spec, inputs, self.name)
+    C:\Users\p7stu\anaconda3\envs\machine2\lib\site-packages\tensorflow\python\keras\engine\input_spec.py:223 assert_input_compatibility
+        str(tuple(shape)))
+
+    ValueError: Input 0 of layer sequential is incompatible with the layer: expected ndim=3, found ndim=2. Full shape received: (None, 3)
+
+
+Process finished with exit code 1
