@@ -1,0 +1,10 @@
+conda create -n vegita python=3.6
+
+conda activate vegita
+
+pip install tensorflow==1.15.0 flask pandas
+
+cd OneDrive\바탕 화면\Vegita-master\Flask Web Server
+
+python server.py
+
